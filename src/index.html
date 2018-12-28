@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js start" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Adds your site or application content here -->
+
+  <div class="content">
+    <div class="sub-content">
+      <h3>Who am I?</h3>
+      <p class="animate">Hello world!, I'm Bakare Emmanuel.</p>
+      <p class="animate">I'm your usual dev, nothing much!</p>
+      <p class="animate">Here's a short list of my important social media profiles to aid your stalking escapades!</p>
+      <a href="https://github.com/Tiemma/"><i class="fab fa-github"></i></a>
+      <a href="https://http://twitter.com/TiemmaBakare"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/bakare-emmanuel-1b8018122/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://stackexchange.com/users/8778192/bakare-emmanuel?tab=accounts/"><i class="fab fa-stack-exchange "></i></a>
+      <a href="https://medium.com/@tiemma"><i class="fab fa-medium"></i></a>
+    </div>
+
+    <div class="sub-content">
+      <h3>What do I do?</h3>
+      <p class="animate">Like most devs, I use whatever gets the job done</p>
+      <p class="animate">If you need a stack, here's the full list</p>
+      <div class="stack">
+        <h4>DevOps</h4>
+        <p class="animate">I'm a DevOps engineer by design. I write and deploy code that's performance driven and I've done that over the years</p>
+        <p class="animate">I sadly automate everything and script processes that take more than two commands to do.</p>
+        <p>As regards things I'm proficient with in no order, they're here!.</p>
+        <div class="cards">
+          <div class="card">
+            Kafka <br /> [My love 😍]
+            <div class="card-content align-normal">
+              <div class="headline">Tools used here: <span class="tools">Zookeeper, Kafka Connect, Kafka Streams, Kafka Control Center, Schema Registry, Avro, Kafka SDKs[Python, Scala, Java, Node], ACLs, Sink Connectors</span></div>
+              <ul>
+                <li>Deployed a kafka connect plugin to a cluster to remap data from one avro schema definition to another, benchmarked at <=5ms per request</li>
+                <li>Built a notification service using various channels
+                  [   SIM800(Wrote a library for this over serial in python), Firebase etc]
+                  which send emails on events pushed to a kafka topic</li>
+                <li>Built a node service to stream data from a kafka topic to the frontend over websockets</li>
+                <li>Automated kafka setups with docker-compose, cause I hated starting up multiple binaries just to test</li>
+                <li>Managed some APIs using Kafka on Raspberry Pis using Python. They pushed data to the cluster and we configured the endpoints, schema registry serialization and monitoring</li>
+              </ul>
+
+              <p>
+                Need links to be sure I didn't make it up?
+                <br /><br/>
+                Some are available as my personal sturvs but I can't sadly publish company work
+              </p>
+              <a href="https://github.com/Tiemma/ES-Kafka-Mongo">Docker-Compose setup for springing up Kafka and all its dependent services</a>
+              <a href="https://github.com/Tiemma/kafka-websockets-node">Small POC on registering a pub-sub stream to a frontend application over websockets</a>
+
+              <a href="#" class="close"><i class="fab fa-close"></i>Close</a>
+            </div>
+          </div>
+          <div class="card">ELK <br/> Elasticsearch, Logstash, Kibana</div>
+          <div class="card">Kubernetes</div>
+          <div class="card">Ansible <br />[Cause I got tired of starting VMs on VMWare for Kubernetes]</div>
+          <div class="card">Vagrant</div>
+          <div class="card">Docker <br /> [Obviously!]</div>
+          <div class="card">AWS Services <br /> [I've used some oh!]</div>
+        </div>
+      </div>
+      <p class="animate"></p>
+    </div>
+
+  </div>
+
+
+
+  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
