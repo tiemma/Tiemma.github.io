@@ -324,15 +324,85 @@ window.onload = () => {
       {
         name: 'Postgresql<br />[Docker]',
         image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'HTML Stack',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Code Cliimate',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Travis CI',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Flask',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'NodeJS',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
       }
     ],
     id: 'stackoverflow-lite'
+  },
+  {
+    links: [
+      {
+        link: 'https://github.com/Tiemma/devfest-kubernetes-demo',
+        title: 'Github Repo',
+        alt: 'Github Repository',
+        icon: 'fab fa-github'
+      },
+      {
+        link: 'http://bit.ly/devfest-kube-slides',
+        title: 'Presentation',
+        alt: 'Presentation',
+        icon: 'fas fa-chalkboard-teacher'
+      }
+    ],
+    status: 'COMPLETED',
+    statusClass: 'completed',
+    title: 'DevFest Kubernetes Demo',
+    description: `
+    The project I used for my speech at DevFest Lagos 2018. I gave a speech on Kubernetes, various container methodologies as opposed to virtual machines
+    along with a project which could be used to setup a single node cluster and deploy an application as a showcase.`,
+    tech: [
+      {
+        name: 'Make',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'YAML',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Kubernetes',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'NodeJS',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Ingress NGINX Controller',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      },
+      {
+        name: 'Docker',
+        image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
+      }
+    ],
+    id: 'devfest-kubernetes'
   }
   ];
 
+  let offSet = 0
   projects.forEach((project) => {
     $(`.projects-list`).append(
-      `<div class="flip-container project" ontouchstart="this.classList.toggle('hover');">
+      `<div class="flip-container project" ontouchstart="this.classList.toggle('hover');" style="transform: translateY(${offSet}rem)">
 
       <div class="flipper">
         <div class="tool front black text flex-column">
@@ -370,6 +440,7 @@ window.onload = () => {
     project.tech.forEach((tech) => {
       createTool(tech.name, tech.image, project.id);
     });
+    offSet += 10;
   });
 
   increaseHeightOnHover();

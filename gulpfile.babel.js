@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import gulp from 'gulp';
+import connect from 'gulp-connect';
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -172,6 +173,32 @@ gulp.task('lint:js', () =>
     .pipe(plugins().eslint.failOnError())
 );
 
+
+// ---------------------------------------------------------------------
+// | Live server tasks                                                 |
+// ---------------------------------------------------------------------
+gulp.task('connect', function() {
+  connect.server({
+    root: 'src',
+    host: '0.0.0.0',
+    port: 8008,
+    debug: true,
+    livereload: true
+  });
+});
+
+// ---------------------------------------------------------------------
+// | Minify css                                                        |
+// ---------------------------------------------------------------------
+var uncss = require('gulp-uncss');
+
+gulp.task('uncss', function() {
+    gulp.src('src/*.css')
+        .pipe(uncss({
+            html: ['src/index.html']
+        }))
+        .pipe(gulp.dest('./out'));
+});
 
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |

@@ -351,6 +351,10 @@ section div{
   padding: var(--body-margin);
 }
 
+#projects .tool{
+  /* margin-left: calc(-0.5 * var(--body-margin)); */
+}
+
 #public-speaking .tool, #public-speaking .tools-list{
   margin-top: 0;
 }
