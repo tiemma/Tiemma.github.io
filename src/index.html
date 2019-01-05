@@ -84,17 +84,17 @@
         <i class="fas fa-chalkboard-teacher" title="Public Speaking"></i>
       </a>
     </div>
-    <div class="skills">
+    <div class="projects">
       <a href="#projects">
         <label>Projects</label>
         <i class="fas fa-suitcase" title="Projects"></i>
       </a>
     </div>
 
-    <div class="contact">
-      <a href="#contact">
-        <label>Contacts</label>
-        <i class="fas fa-at" title="Contact"></i>
+    <div class="tweets">
+      <a href="#tweets">
+        <label>Tweets</label>
+        <i class="fas fa-at" title="Tweets"></i>
       </a>
     </div>
     <hr />
@@ -126,7 +126,11 @@
     </div>
   </section>
 
-  <section id="landing" class="magictime spaceInRight">
+  <div id="portfolio" class="magictime swashIn">
+    <img class="logo" src="icon.png" />
+  </div>
+
+  <section id="landing" class="magictime spaceInRight invisible">
     <h1 class="header text">
       Who am I?
       <hr />
@@ -181,15 +185,16 @@
 
       <p>My past work experiences have rotated majorly around startups and I'm open for new challenges,
         <em>remote opportunities</em> are always appreciated</p>
-      <p>I've worked in and led teams and communities in my past life, hackathons alongside organizing meetups and study jams
-        from engagements in communities such as GDG, forLoop and many others</p>
-      <p>I look forward to becoming a Product Manager / Leading consultant, since understanding the dynamics of any engagement
+      <p>I've worked in and led teams and communities for hackathons alongside organizing meetups and study jams from engagements
+        in communities such as GDG, forLoop and many others</p>
+      <p>I look forward to becoming a Product Manager / Leading Consultant, since understanding the dynamics of any engagement
         in both economic and tech wise terms is what I aim for in any activity.</p>
       <p>During my spare time, I chill and listen to rock and rap, practice speed reading vigorously on Quora and cover more
         technical scope from books in my Calibre library cause YOLO!</p>
 
     </div>
   </section>
+
   <section id="skills" class="magictime invisible">
     <h1 class="header text">
       Skills and Qualifications
@@ -216,9 +221,17 @@
       Networking
     </h2>
     <div class="tools-list" id="networking-tools"> </div>
+    <h2 class="text sub-header">
+      Methodologies
+    </h2>
+    <div class="tools-list" id="methodology-tools"> </div>
+    <h2 class="text sub-header">
+      Certification
+    </h2>
+    <div class="tools-list" id="certification-links"> </div>
   </section>
 
-  <section id="speaking" class="magictime">
+  <section id="speaking" class="magictime invisible">
     <h1 class="header text">
       Public Speaking
       <hr />
@@ -242,302 +255,137 @@
       Projects
       <hr />
     </h1>
-    <div class="projects-list tools-list">
-      
+    <div class="projects-status-list tools-list">
     </div>
   </section>
 
-
-  <section id="project">
-    <div class="header text">
-      Projects!
+  <section id="tweets" class="magictime invisible">
+    <h1 class="header text">
+      Major Tweets
       <hr />
-    </div>
-    <div class="backdrop">
-      <div class="carousel">
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">Devfest Kubernetes Demo</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">Make </span>
-              <span class="item">YAML</span>
-              <span class="item">Kubernetes </span>
-              <span class="item">NodeJS</span>
-              <span class="item">Ingress on NGINX</span>
-              <span class="item">Docker</span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                <a target="_blank" href="s">
-                  <i class="fas fa-link"></i> Repo for the codebase</a>
-              </span>
-              <span class="item">
-                <a target="_blank" href="https://github.com/Tiemma/devfest-kubernetes-demo">
-                  <i class="fas fa-link"></i> Slides</a>
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">GRPC CRUD</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              This is a microservice which I've been working on for about a month now. It's an intro project for me to learn the nitty
-              gritty sides of various architecture patterns which I've covered from various books such as
-              <em>Designing Distributed Systems</em> and
-              <em>The SRE Handbook from Google</em>
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">Python </span>
-              <span class="item">GRPC</span>
-              <span class="item">Kafka </span>
-              <span class="item">ELK</span>
-              <span class="item">Docker Compose</span>
-              <span class="item">Pypiserver for managing global dependencies[logging, event publisher etc]</span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                <a target="_blank" href="https://github.com/Tiemma/grpc-crud">
-                  <i class="fas fa-link"></i> Repo for the codebase</a>
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">Stackdriver demo</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              A demo project which I used to showcase the wonderful features provided by the distributed metrics tool called Stackdriver
-              at a Devfest event in Ajah, Lagos.
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">NodeJS </span>
-              <span class="item">Stackdriver SDKs</span>
-              <span class="item">Google Cloud App Engine </span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                <a target="_blank" href="http://bit.ly/stack-github">
-                  <i class="fas fa-link"></i> Repo for the codebase</a>
-              </span>
-              <span class="item">
-                <a target="_blank" href="http://bit.ly/stack-slides">
-                  <i class="fas fa-link"></i> Slides</a>
-              </span>
-              <span class="item">
-                <a target="_blank" href="http://bit.ly/stack-demo">
-                  <i class="fas fa-link"></i> Demo</a>
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">Kafka on Websockets</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              A POC which I worked on to showcase a better model for replacing a polling system on Comet which ran in Scala.
-              <br />This was inspired as a solution for the lack of Websockets support for Lift in Scala. This was implemented
-              during my employment at GRIT Systems, a power driven hardware IOT company in the heart of VI, Lagos.
-              <br />It basically streams data from the kafka clusters which would be consumed by a D3 dashboard for live updates
-              on power usuage from the grit meters.
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">NodeJS </span>
-              <span class="item">Avro Kafka SDK</span>
-              <span class="item">Websockets </span>
-              <span class="item">Schema Registry </span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                No links available as this is a company project
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">Kubernetes Orchestration</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              This is a project which sets up a full kubernetes cluster with slave nodes and all that. It was built to try to diagnose
-              the issues for a user who posted it on Stackoverflow.
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">Ansible </span>
-              <span class="item">Vagrant</span>
-              <span class="item">Kubernetes</span>
-              <span class="item">Bash</span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                <span class="item">
-                  <a target="_blank" href="https://github.com/Tiemma/ansible-vagrant-kubernetes-cluster">
-                    <i class="fas fa-link"></i> Repo for the codebase</a>
-                </span>
-                <span class="item">
-                  <a target="_blank" href="https://askubuntu.com/questions/1095382/setting-up-a-kubernetes-cluster-on-ubuntu-18-04">
-                    <i class="fas fa-link"></i> StackOverflow Thread</a>
-                </span>
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">Kafka Connect Plugin</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              A project which was used to process data on a kafka topic following a massive schema change which wouldn't be migrated to
-              older devices. I implemeted this in Java and used Kafka Connect and a couple other tools to generate helper
-              classes from the Avro file alongside error handling, logging, benchmarks which hit 5ms highs alongside the
-              usual tests and coverage.
-              <br />This was my first project where I really thought at scale as the Kafka cluster gets at least 50 messages published
-              per second from personal benchmarks for which this was able to process at least 200 following a stress test.
-              <br /> This was implemented during my employment at GRIT Systems, a power driven hardware IOT company in the heart
-              of VI, Lagos
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">Java </span>
-              <span class="item">Kafka Connect</span>
-              <span class="item">Spark [Whilst debugging a schema registry issue, I got to use this alongside]</span>
-              <span class="item">Avro Class Generators for Java</span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                No links available as this is a company project
-              </span>
-            </span>
-          </p>
-        </div>
-        <div class="project magictime">
-          <p class="text lighten">
-            <i class="fas fa-link"></i>
-            <br />
-            <a href="#projects">PWA - News for the People</a>
-            <br />
-            <br />
-            <span class="project-text readable hide" id="frontend">
-              A PWA developed as part of the challenges for being awarded a certificate in the Andela frontend program.
-              <br />
-              <br />Technologies Used
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">Service Workers </span>
-              <span class="item">Javascript</span>
-              <span class="item">MaterializeCSS</span>
-              <span class="item">IndexedDB</span>
-              <span class="item">News API</span>
-              <br />
-              <br />Links
-              <br />
-              <i class="ornament">f</i>
-              <span class="item">
-                <a target="_blank" href="https://github.com/Tiemma/PWA_ALC">
-                  <i class="fas fa-link"></i> Repo for the codebase</a>
-              </span>
-              <span class="item">
-                <a target="_blank" href="https://tiemma.github.io/PWA_ALC/">
-                  <i class="fas fa-link"></i> Demo</a>
-              </span>
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </h1>
+    <div class="twitter-list add-padding">
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">So today, I&#39;d be taking on shared dependencies when developing micro services.
+          <br>
+          <br>This doesn&#39;t just apply to micro services alone but general application development. There are cases where
+          we copy code instead of reusing code.
+          <br>
+          <br>Here&#39;s the full gist</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1075130498807148544?ref_src=twsrc%5Etfw">December 18, 2018</a>
+      </blockquote>
 
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">For this evening, I&#39;d be covering a very simple yet unappreciated function when it comes down to concurrent system&#39;s
+          and this is Locks.
+          <br>
+          <br>Call them whatever you want, Mutex, Lock, Semaphores
+          <br>
+          <br>They&#39;re very important yet never utilized</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1072231274838941697?ref_src=twsrc%5Etfw">December 10, 2018</a>
+      </blockquote>
 
-  <section id="contact">
-    <div class="header text">
-      Contact Me!
-      <hr />
-    </div>
-    <div class="backdrop">
-      <p class="text lighten">You can reach me using the social media platforms on the left, my contact details are below and a resume is included
-        for any referral likewise:
-        <br />
-        <i class="ornament">f</i>
-        <br />
-        <em>Email</em>
-        <br />emmanueltimmy98@gmail.com
-        <br />
-        <br />
-        <em>Phone Number</em>
-        <br />(234) 708 0453 821
-        <br />
-        <br />
-        <em>Resume</em>
-        <br />
-        <a href="https://docs.google.com/document/d/1gue0DTS6RGdGnIG_-qyk6XLcF_AyZFpr3RoLr8Imtvs/edit?usp=sharing">Resume - Bakare Emmanuel</a>
-      </p>
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">Let&#39;s take this down once and for all
+          <br>
+          <br>Do y&#39;all actually do test driven development?</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1071799755557298176?ref_src=twsrc%5Etfw">December 9, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">The way I&#39;ve come to understand building proper large scale applications is to consider them like adapters. They
+          function on their own but are only enhanced by other services.
+          <br>
+          <br>The future is side car containers, write modular code, deeply modular containers
+          <a href="https://t.co/kBMBNTMp0e">pic.twitter.com/kBMBNTMp0e</a>
+        </p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1067536849755885569?ref_src=twsrc%5Etfw">November 27, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">I do this alot.
+          <br>
+          <br>If you&#39;re reading this, it&#39;s time to automate things.
+          <br>
+          <br>An hour of work for a one time task could become days if you&#39;re debugging and always redoing it manually.
+          <br>
+          <br>Automation isn&#39;t a bad thing.</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1074084873911058433?ref_src=twsrc%5Etfw">December 15, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">If you ever want to make it in life, don&#39;t follow the crowd. To make it big, you have to stand out.
+          <br>There&#39;s nothing interesting about any show person, you&#39;ve got to bring something new to the table.
+          <br>- Yoda Ifedayo, GRIT Systems</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1074043472582270977?ref_src=twsrc%5Etfw">December 15, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">GRPC has a lot of cool tweaks to be honest
+          <br>
+          <br>Still running through it, hoping to see the full scope of it soon enough
+          <br>
+          <br>Next on my list?
+          <br>
+          <br>Varnish vs Redis!</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1073361709618876416?ref_src=twsrc%5Etfw">December 13, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">Life lesson
+          <br>
+          <br>The more you eat, the harder you are to kidnap.
+          <br>
+          <br>Stay safe, eat cake.</p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1073254415346348032?ref_src=twsrc%5Etfw">December 13, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">I love this dudes enthusiasm 😂😂😂😂
+          <a href="https://t.co/N6cAJ39Bzr">pic.twitter.com/N6cAJ39Bzr</a>
+        </p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1073245700417351680?ref_src=twsrc%5Etfw">December 13, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">This is incredibly innovative
+          <a href="https://twitter.com/ShopKonga?ref_src=twsrc%5Etfw">@ShopKonga</a>
+          <br>
+          <br>They&#39;ve got my vote 💥💥💥
+          <a href="https://t.co/tIOTZulK2q">pic.twitter.com/tIOTZulK2q</a>
+        </p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1072921636360372225?ref_src=twsrc%5Etfw">December 12, 2018</a>
+      </blockquote>
+
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">Just a normal day wondering where Foo and Bar came from in the software lingo
+          <a href="https://t.co/L8a7n0FWtb">https://t.co/L8a7n0FWtb</a>
+          <a href="https://twitter.com/iamdevloper?ref_src=twsrc%5Etfw">@iamdevloper</a>
+        </p>&mdash; echo Bakare Emmanuel | grep BakMan (@TiemmaBakare)
+        <a href="https://twitter.com/TiemmaBakare/status/1072761733968736259?ref_src=twsrc%5Etfw">December 12, 2018</a>
+      </blockquote>
+
     </div>
   </section>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer async></script>
-  <script async src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  <script defer src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-  <script defer src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
   <script async src="js/plugins.js"></script>
   <script async src="js/main.js"></script>
   <script async src="https://underscorejs.org/underscore-min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script defer>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131790519-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131790519-1');
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
