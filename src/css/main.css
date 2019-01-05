@@ -96,7 +96,8 @@ textarea {
     --body-margin: 1rem;
     --section-height: calc(100vh - (3 * var(--body-margin)));
     --cards-border-color: white;
-    --section-width: calc(100vw - 2* (var(--nav-bar-width) + var(--body-margin)));
+    --section-width: calc(100vw - (2* (var(--nav-bar-width) + var(--body-margin))));
+    --portfolio-logo: calc(100vw - (2 * var(--body-margin)));
     --shadow-depth-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
   }
@@ -158,7 +159,7 @@ body{
 }
 
 body *{
-  transition: all 1s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 section{
@@ -187,7 +188,7 @@ p{
   display: inline-block;
 }
 
-em{
+em, i{
   color: rebeccapurple !important;
 }
 
@@ -199,7 +200,7 @@ em{
 
 #landing{
   z-index:10;
-  margin-top: 0;
+  margin-top: var(--section-height);
 }
 
 
@@ -272,7 +273,7 @@ section div{
   transform:rotate(90deg);
 }
 
-.skill, .project{
+.skill, .project, .flip-container .tool, i{
   cursor: pointer;
 }
 
@@ -351,11 +352,15 @@ section div{
   padding: var(--body-margin);
 }
 
-#projects .tool{
-  /* margin-left: calc(-0.5 * var(--body-margin)); */
+.add-padding{
+  padding: var(--body-margin);
 }
 
-#public-speaking .tool, #public-speaking .tools-list{
+#projects .text{
+  margin: calc(var(--body-margin)/2) !important;
+}
+
+#public-speaking .tools-list{
   margin-top: 0;
 }
 
@@ -369,7 +374,7 @@ section div{
   padding: calc(var(--body-margin) / 2);
 }
 
-#speaking .tools-list, #projects .tools-list{
+#speaking .tools-list, #projects .tools-list, #certification-links{
   column-count: 1;
 }
 
@@ -396,6 +401,20 @@ section div{
   color: black !important;
 }
 
+.zero-translate{
+  transform: translate(0) !important;
+}
+
+#portfolio{
+  padding: calc( var(--nav-bar-width) );
+  /* width: var(--portfolio-logo); */
+  position: absolute;
+}
+
+#portfolio img{
+  width: 120%;
+}
+
 /*-----PROJECTS------*/
 /* entire container, keeps perspective */
 .flip-container {
@@ -406,11 +425,17 @@ section div{
 
 
 	/*  UPDATED! flip the pane when hovered */
-	.flip-container:hover .back {
+	.flip-container.flip .back {
     transform: rotateY(0deg);
     visibility: visible;
-	}
-	.flip-container:hover .front {
+  }
+
+  .flip-container.flip .back .content{
+    display: unset;
+  }
+
+  
+	.flip-container.flip .front {
 	    transform: rotateY(180deg);
   }
   .flip-container:hover .expandOnHover {
@@ -449,6 +474,11 @@ section div{
 .back {
   transform: rotateY(-180deg);
   visibility: hidden;
+  z-index: 500;
+}
+
+.back .content{
+  display: none;
 }
 
   
@@ -459,13 +489,36 @@ section div{
     border-radius: var(--body-margin);
   }
 
+  #portfolio{
+    display: none;
+  }
+
+  #landing{
+    margin-top: unset;
+    visibility: visible !important;
+  }
+
   .name{
     display: inline !important;
+    font-size: 2rem;
+  }
+
+  .text{
+    font-size: 1.5rem !important;
+  }
+
+  .header{
+    font-size: 2rem !important;
   }
 
   section#about{
     margin-top: 0;
   }
+
+  #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list{
+    column-count: 2;
+  }
+  
 
 
   :root{
