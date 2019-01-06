@@ -91,8 +91,10 @@ textarea {
    ========================================================================== */
 
    :root {
-    --main-bg-color: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --nav-bar-width: 4rem;
+    --body-color: black;
+    /* --main-bg-color: linear-gradient(to right, #E9E4F0, #D3CCE3); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --main-bg-color: white;
+    --nav-bar-width: 6rem;
     --body-margin: 1rem;
     --section-height: calc(100vh - (3 * var(--body-margin)));
     --cards-border-color: white;
@@ -156,16 +158,17 @@ html, body {
 
 body{
   margin: var(--body-margin);
+  background: var(--body-color);
 }
 
 body *{
-  transition: all .4s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 section{
   background: var(--main-bg-color);
   min-height: var(--section-height);
-  margin: var(--nav-bar-width);
+  margin: unset;
   margin-right: 0;
   /* display: none; */
   border-radius: var(--body-margin);
@@ -188,9 +191,10 @@ p{
   display: inline-block;
 }
 
-em, i{
+em, i, label{
   color: rebeccapurple !important;
 }
+
 
 
 .hide-overflow{
@@ -206,7 +210,7 @@ em, i{
 
 #side-bar{
   position: fixed;
-  width: var(--nav-bar-width);
+  width: 100%;
   height: 100vh;
   max-height: 100vh;
   margin: 0;
@@ -215,8 +219,9 @@ em, i{
   border-right: 1px dashed var(--cards-border-color);
   background: var(--cards-border-color);
   color: black;
-  margin-top: 0;
+  top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .icon{
@@ -225,7 +230,8 @@ em, i{
 
 #side-bar div{
   text-align: center;
-  font-size: calc(var(--nav-bar-width) * 1 / 4);
+  font-size: calc(var(--nav-bar-width) * 1 / 6);
+  margin-top: calc(var(--body-margin)/2);
 }
 
 section div{
@@ -241,12 +247,20 @@ section div{
   max-width:var(--nav-bar-width);
 }
 
-#side-bar label{
-  display: none;
+#side-bar .text{
+  margin-left: unset;
+  margin-right: unset;
+  margin-bottom: unset;
 }
 
 #side-bar a, #social-media a{
   color: var(--cards-border-color);
+}
+
+.social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 
@@ -261,6 +275,8 @@ section div{
   background-color: var(--cards-border-color);
 }
 
+
+
 .left{
   float: left;
 }
@@ -273,7 +289,7 @@ section div{
   transform:rotate(90deg);
 }
 
-.skill, .project, .flip-container .tool, i{
+.skill, .project, .flip-container .tool, i, label{
   cursor: pointer;
 }
 
@@ -317,12 +333,18 @@ section div{
   font-size: 1.5rem;
 }
 
-.header hr{
-  box-shadow: var(--shadow-depth-1);
-  background: #12c2e9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+hr{
+  /* box-shadow: var(--shadow-depth-1); */
+  background: var(--body-color);
+  /* background: #12c2e9;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
+}
+
+.hide-sidebar{
+  visibility: hidden;
+  width: 0 !important;
 }
 
 .align-center{
@@ -381,7 +403,6 @@ section div{
 .tool-name{
   font-size: 0.8rem;
   color: black;
-  
 }
 
 .tool-image{
@@ -438,20 +459,18 @@ section div{
 	.flip-container.flip .front {
 	    transform: rotateY(180deg);
   }
+
   .flip-container:hover .expandOnHover {
     display: block
   }
 
-.flip-container, .front, .back {
-  width: var(--section-width);
-}
 
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
   position: relative;
-  display: inline;
+  display: block;
 }
 
 /* hide back of pane during swap */
@@ -461,7 +480,8 @@ section div{
 	transform-style: preserve-3d;
 	position: absolute;
 	top: 0;
-	left: 0;
+  left: 0;
+  width: calc(80vw - 2 * var(--body-margin));
 }
 
 /*  UPDATED! front pane, placed above back */
@@ -477,12 +497,61 @@ section div{
   z-index: 500;
 }
 
+
+
 .back .content{
   display: none;
 }
 
+
+/*------Hamburger----------*/
+div.hamburger {
+  position: fixed;
+  left: var(--body-margin);
+  color: white;
+  top: 0;
+  z-index: 10000;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 0px;
+  margin: 10% auto;
+  -webkit-transition: all .3s ease, -webkit-transform .2s ease;
+  transition: all .3s ease, transform .2s ease;
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, #fff 20%, #eee 23%, transparent 23%, transparent 48%, #ddd 48%, #ccc 50%, transparent 47%, transparent 76%, #2E313C 76%, #bbb 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+  background: linear-gradient(top, transparent 0%, transparent 20%, #fff 20%, #eee 23%, transparent 23%, transparent 48%, #ddd 48%, #ccc 50%, transparent 47%, transparent 76%, #2E313C 76%, #bbb 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+}
+div.hamburger:active, div.hamburger:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+div.hamburger.clicked {
+  background: -webkit-linear-gradient(135deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%);
+  background: linear-gradient(135deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: 85vw;
+}
+div.hamburger.clicked:active, div.hamburger.clicked:hover {
+  -webkit-transform: scale(0.9) rotate(180deg);
+  -ms-transform: scale(0.9) rotate(180deg);
+  transform: scale(0.9) rotate(180deg);
+}
+
+
   
 @media only screen and (min-width: 768px){
+
+  div.hamburger{
+    margin: 5% auto;
+  }
+
+  section{
+    margin: var(--nav-bar-width);
+  }
 
   #landing img{
     width: 50%;
