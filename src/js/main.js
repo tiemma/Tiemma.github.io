@@ -14,58 +14,63 @@ window.onload = () => {
     });
   }
 
-  $(window).scroll(_.debounce(function () {
+  $("div.hamburger").click(function() {
+    $('#side-bar').toggleClass('hide-sidebar');
+    $('div.hamburger').toggleClass('clicked');
+  })
 
-    if ($(this).scrollTop() >= $('#portfolio').position().top) {
-      setTimeout(() => {
-        $('#landing').addClass('spaceInLeft');
-        $('#landing').removeClass('invisible');
-      }, timeout)
+  // $(window).scroll(_.debounce(function () {
 
-    }
+  //   if ($(this).scrollTop() >= $('#portfolio').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#landing');
+  //     }, timeout)
 
-    if ($(this).scrollTop() >= $('#landing').position().top) {
-      setTimeout(() => {
-        $('#about').addClass('spaceInLeft');
-        $('#about').removeClass('invisible');
-      }, timeout)
+  //   }
 
-    }
-    if ($(this).scrollTop() >= $('#about').position().top) {
-      setTimeout(() => {
-        $('#skills').addClass('spaceInRight');
-        $('#skills').removeClass('invisible');
-      }, timeout)
-    }
+  //   if ($(this).scrollTop() >= $('#landing').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#about');
+  //     }, timeout)
 
-    if ($(this).scrollTop() >= $('#skills').position().top) {
-      setTimeout(() => {
-        $('#speaking').addClass('spaceInLeft');
-        $('#speaking').removeClass('invisible');
-      }, timeout)
-    }
+  //   }
+  //   if ($(this).scrollTop() >= $('#about').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#skills');
+  //     }, timeout)
+  //   }
 
-    if ($(this).scrollTop() >= $('#speaking').position().top) {
-      setTimeout(() => {
-        $('#projects').addClass('spaceInRight');
-        $('#projects').removeClass('invisible');
-      }, timeout)
-    }
+  //   if ($(this).scrollTop() >= $('#skills').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#speaking');
+  //     }, timeout)
+  //   }
 
-    if ($(this).scrollTop() >= $('#projects').position().top) {
-      setTimeout(() => {
-        $('#tweets').addClass('spaceInLeft');
-        $('#tweets').removeClass('invisible');
-      }, timeout)
-    }
+  //   if ($(this).scrollTop() >= $('#speaking').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#projects');
+  //     }, timeout)
+  //   }
 
-  }, 100));
+  //   if ($(this).scrollTop() >= $('#projects').position().top) {
+  //     setTimeout(() => {
+  //       animateCard('#tweets');
+  //     }, timeout)
+  //   }
+
+  // }, 100));
 
   let animateToID = (id) => {
     $('html, body').animate({
       scrollTop: $(id).offset().top
     }, 500);
   };
+
+  let animateCard = (id) => {
+    $(id).addClass('spaceInDown');
+    $(id).removeClass('invisible');
+    animateToID(id);
+  }
 
   let increaseHeightOnHover = () => {
     let container = '.flip-container ',
