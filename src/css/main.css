@@ -342,7 +342,7 @@ hr{
   
 }
 
-.hide-sidebar{
+.hide-sidebar, .hide-sidebar *{
   visibility: hidden;
   width: 0 !important;
 }
@@ -544,6 +544,10 @@ div.hamburger.clicked:active, div.hamburger.clicked:hover {
 
   
 @media only screen and (min-width: 768px){
+
+  #side-bar i{
+    font-size: 4rem;
+  }
 
   div.hamburger{
     margin: 5% auto;
