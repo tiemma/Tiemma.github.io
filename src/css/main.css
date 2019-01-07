@@ -193,7 +193,7 @@ em, i, label, .header, .sub-header{
 }
 
 h1{
-  margin: var(--body-margin);
+  margin: var(--body-margin) !important;
 }
 
 
@@ -544,10 +544,10 @@ div.hamburger.clicked:active, div.hamburger.clicked:hover {
 
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 800px){
 
   #side-bar i{
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   div.hamburger{
@@ -556,6 +556,10 @@ div.hamburger.clicked:active, div.hamburger.clicked:hover {
 
   section{
     margin: var(--nav-bar-width);
+  }
+
+  .name, .tool-name{
+    font-size: 1rem;
   }
 
   #landing img{
@@ -589,7 +593,7 @@ div.hamburger.clicked:active, div.hamburger.clicked:hover {
     margin-top: 0;
   }
 
-  #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list{
+  #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list, #contact-links{
     column-count: 2;
   }
 

@@ -233,7 +233,7 @@ window.onload = () => {
     image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png',
     id: 'linux'
   }, {
-    name: 'Kernel Process Lifecycle Debugging<br />[Init, Ltrace]',
+    name: 'Kernel Process Lifecycle Debugging<br /><br />[Init, Ltrace]',
     image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png',
     id: 'linux'
   },
@@ -247,7 +247,7 @@ window.onload = () => {
     id: 'networking'
   },
   {
-    name: 'DHCP and DNS Configuration <br />[Kea, BIND]',
+    name: 'DHCP and DNS Configuration <br /><br />[Kea, BIND]',
     image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png',
     id: 'networking'
   },
@@ -333,7 +333,7 @@ window.onload = () => {
   },
   {
     link: 'mailto:emmanueltimmy98@gmail.com',
-    title: 'Email <br /><br /> emmanueltimmy98@gmail.com',
+    title: 'Email <br /><br />emmanueltimmy98@gmail.com',
     alt: 'email',
     id: 'contact'
   },
@@ -414,17 +414,17 @@ window.onload = () => {
     title: 'Stackoverflow Lite',
     description: `
     I built this during as a challenge exercise for an application to become a Volunteer Learning Facilitator role at Andela.
-    The challenge had hinted that all features be implemented with base technologies<br/>[HTML, CSS and JS only!]<br />
+    The challenge had hinted that all features be implemented with base technologies<br/>[HTML, CSS and JS only!]<br /><br />
     of which no framework or ORM be used.
-    <br /> We were also mandated to write tests and cover a degree of criteria with progress tracking with Pivotal
+    <br /><br /> We were also mandated to write tests and cover a degree of criteria with progress tracking with Pivotal
     tracker, linting and code coverage with a 2 week and 1 week period for backend and frontend development respectively.
-    <br /> Unfortunately, the onboarding criteria for acceptance into the program for Nigeria required a NodeJS submission of which I had developed the
+    <br /><br /> Unfortunately, the onboarding criteria for acceptance into the program for Nigeria required a NodeJS submission of which I had developed the
     entire platform in Flask, I had to rewrite the entire backend services, ORM and auth middlewares in NodeJS over the period of less than a week.
-    <br /> At the end of the 3 week challenge, we went through an array of online training sessions and a final inhouse interview.
-    <br />I was among the 5 applicants selected across the 36 states of Nigeria.`,
+    <br /><br /> At the end of the 3 week challenge, we went through an array of online training sessions and a final inhouse interview.
+    <br /><br />I was among the 5 applicants selected across the 36 states of Nigeria.`,
     tech: [
       {
-        name: 'Postgresql<br />[Docker]',
+        name: 'Postgresql<br /><br />[Docker]',
         image: 'http://akashreddy.com/assets/images/8ff2d571-2e58-4f83-9583-0dda305aaf9fnagios-logo-500x124.png'
       },
       {
@@ -607,9 +607,9 @@ window.onload = () => {
     title: 'Kafka On Websockets',
     description: `
     A POC which I worked on to showcase a better model for replacing a polling system on Comet which ran in Scala.
-    <br />This was inspired as a solution for the lack of Websockets support for Lift in Scala. It was implemented
+    <br /><br />This was inspired as a solution for the lack of Websockets support for Lift in Scala. It was implemented
     during my employment at GRIT Systems, a power driven hardware IOT company in the heart of VI, Lagos.
-    <br />It basically streams data from the kafka clusters which would be consumed by a D3 dashboard for live updates
+    <br /><br />It basically streams data from the kafka clusters which would be consumed by a D3 dashboard for live updates
     about power usuage from the GRIT meters
     `,
     tech: [
@@ -695,9 +695,9 @@ window.onload = () => {
               older devices. I implemeted this in Java and used Kafka Connect and a couple other tools to generate helper
               classes from the Avro file alongside error handling, logging, benchmarks which hit 5ms highs alongside the
               usual tests and coverage.
-              <br />This was my first project where I really thought at scale as the Kafka cluster gets at least 50 messages published
+              <br /><br />This was my first project where I really thought at scale as the Kafka cluster gets at least 50 messages published
               per second from personal benchmarks for which this was able to process at least 200 following a stress test.
-              <br /> This was implemented during my employment at GRIT Systems, a power driven hardware IOT company in the heart
+              <br /><br /> This was implemented during my employment at GRIT Systems, a power driven hardware IOT company in the heart
               of VI, Lagos
     `,
     tech: [
@@ -782,6 +782,7 @@ window.onload = () => {
   ];
 
   let offSet = 0
+  let isMobile = () => { return ('ontouchstart' in document.documentElement); }
   projects.forEach((project) => {
     $(`.projects-status-list`).append(
       `<div class="flip-container project magictime" style="transform: translateY(${offSet}rem)" data-id="${project.id}" id="${project.id}">
@@ -822,10 +823,11 @@ window.onload = () => {
     project.tech.forEach((tech) => {
       createTool(tech.name, tech.image, project.id);
     });
-    offSet += $(window).width() < 800 ? 10 : 15;
+    offSet += isMobile() ? 10 : 15;
   });
 
-  $(`.projects-status-list`).css('height', ( $(window).width() < 1280 ? 11 : 16 * projects.length) + 'rem')
+  let multiplier = isMobile() ? 11 : 16;
+  $(`.projects-status-list`).css('height', ( multiplier * projects.length) + 'rem')
 
   increaseHeightOnHover();
 
