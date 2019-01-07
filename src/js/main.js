@@ -14,10 +14,10 @@ window.onload = () => {
     });
   }
 
-  $("div.hamburger").click(function() {
+  $("div.hamburger, #side-bar a").click(function() {
     $('#side-bar').toggleClass('hide-sidebar');
     $('div.hamburger').toggleClass('clicked');
-  })
+  });
 
   // $(window).scroll(_.debounce(function () {
 
@@ -331,6 +331,18 @@ window.onload = () => {
     alt: 'Adwords',
     id: 'certification'
   },
+  {
+    link: 'mailto:emmanueltimmy98@gmail.com',
+    title: 'Email <br /><br /> emmanueltimmy98@gmail.com',
+    alt: 'email',
+    id: 'contact'
+  },
+  {
+    link: 'https://docs.google.com/document/d/1gue0DTS6RGdGnIG_-qyk6XLcF_AyZFpr3RoLr8Imtvs/edit?usp=sharing',
+    title: 'Resume',
+    alt: 'resume',
+    id: 'contact'
+  },
   ];
 
   speakerPosts.forEach((speech) => {
@@ -405,8 +417,10 @@ window.onload = () => {
     The challenge had hinted that all features be implemented with base technologies<br/>[HTML, CSS and JS only!]<br />
     of which no framework or ORM be used.
     <br /> We were also mandated to write tests and cover a degree of criteria with progress tracking with Pivotal
-    tracker, linting and code coverage.
-    <br /> At the end of the challenge, we went through an array of online training sessions and a final inhouse interview.
+    tracker, linting and code coverage with a 2 week and 1 week period for backend and frontend development respectively.
+    <br /> Unfortunately, the onboarding criteria for acceptance into the program for Nigeria required a NodeJS submission of which I had developed the
+    entire platform in Flask, I had to rewrite the entire backend services, ORM and auth middlewares in NodeJS over the period of less than a week.
+    <br /> At the end of the 3 week challenge, we went through an array of online training sessions and a final inhouse interview.
     <br />I was among the 5 applicants selected across the 36 states of Nigeria.`,
     tech: [
       {
