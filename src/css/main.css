@@ -192,6 +192,9 @@ em, i, label, .header, .sub-header{
   color: rebeccapurple !important;
 }
 
+h1{
+  margin: var(--body-margin);
+}
 
 
 .hide-overflow{
@@ -588,6 +591,14 @@ div.hamburger.clicked:active, div.hamburger.clicked:hover {
 
   #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list{
     column-count: 2;
+  }
+
+  .tools-list{
+    padding: calc(var(--body-margin) * 2);
+  }
+
+  .front, .back{
+    width: calc(80vw - 4 * var(--body-margin));
   }
   
 

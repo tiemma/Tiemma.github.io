@@ -822,10 +822,10 @@ window.onload = () => {
     project.tech.forEach((tech) => {
       createTool(tech.name, tech.image, project.id);
     });
-    offSet += 10;
+    offSet += $(window).width() < 800 ? 10 : 15;
   });
 
-  $(`.projects-status-list`).css('height', (11 * projects.length) + 'rem')
+  $(`.projects-status-list`).css('height', ( $(window).width() < 1280 ? 11 : 16 * projects.length) + 'rem')
 
   increaseHeightOnHover();
 
