@@ -91,11 +91,12 @@ textarea {
    ========================================================================== */
 
    :root {
-    --main-bg-color: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --nav-bar-width: 4rem;
+    --body-color: black;
+    --main-bg-color: white;
+    --nav-bar-width: 6rem;
     --body-margin: 1rem;
     --section-height: calc(100vh - (3 * var(--body-margin)));
-    --cards-border-color: white;
+    --cards-border-color: #e0e0e0;
     --section-width: calc(100vw - (2* (var(--nav-bar-width) + var(--body-margin))));
     --portfolio-logo: calc(100vw - (2 * var(--body-margin)));
     --shadow-depth-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -156,23 +157,22 @@ html, body {
 
 body{
   margin: var(--body-margin);
+  background: var(--body-color);
 }
 
 body *{
-  transition: all .4s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 section{
   background: var(--main-bg-color);
   min-height: var(--section-height);
-  margin: var(--nav-bar-width);
-  margin-right: 0;
-  /* display: none; */
+  margin: unset;
+  margin-left: 20px;
   border-radius: var(--body-margin);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
- transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  background: #D3CCE3;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background: white;  /* fallback for old browsers */
   z-index: 10;
   position: relative;
 
@@ -188,8 +188,12 @@ p{
   display: inline-block;
 }
 
-em, i{
+em, i, label, .header, .sub-header{
   color: rebeccapurple !important;
+}
+
+h1{
+  margin: var(--body-margin) !important;
 }
 
 
@@ -206,7 +210,7 @@ em, i{
 
 #side-bar{
   position: fixed;
-  width: var(--nav-bar-width);
+  width: 100%;
   height: 100vh;
   max-height: 100vh;
   margin: 0;
@@ -215,8 +219,9 @@ em, i{
   border-right: 1px dashed var(--cards-border-color);
   background: var(--cards-border-color);
   color: black;
-  margin-top: 0;
+  top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .icon{
@@ -225,7 +230,8 @@ em, i{
 
 #side-bar div{
   text-align: center;
-  font-size: calc(var(--nav-bar-width) * 1 / 4);
+  font-size: calc(var(--nav-bar-width) * 1 / 6);
+  margin-top: calc(var(--body-margin)/2);
 }
 
 section div{
@@ -241,12 +247,20 @@ section div{
   max-width:var(--nav-bar-width);
 }
 
-#side-bar label{
-  display: none;
+#side-bar .text{
+  margin-left: unset;
+  margin-right: unset;
+  margin-bottom: unset;
 }
 
 #side-bar a, #social-media a{
   color: var(--cards-border-color);
+}
+
+.social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 
@@ -261,6 +275,8 @@ section div{
   background-color: var(--cards-border-color);
 }
 
+
+
 .left{
   float: left;
 }
@@ -273,14 +289,13 @@ section div{
   transform:rotate(90deg);
 }
 
-.skill, .project, .flip-container .tool, i{
+.skill, .project, .flip-container .tool, i, label{
   cursor: pointer;
 }
 
 
 .text {
   font: bolder 1rem "Quicksand";
-  /* text-shadow: 0 0 9px grey; */
   margin: var(--body-margin);
   color: black;
 }
@@ -304,25 +319,25 @@ section div{
 }
 
 .header{
-  color: var(--cards-border-color);
   border: 1px 0 1px 0 dashed var(--cards-border-color);
   padding-top: 2rem;
   font-size: 2rem;
 }
 
 .sub-header{
-  color: var(--cards-border-color);
+  text-shadow: 1px 1px #9e9e9e;
   border: 1px 0 1px 0 dashed var(--cards-border-color);
   padding-top: 2rem;
   font-size: 1.5rem;
 }
 
-.header hr{
-  box-shadow: var(--shadow-depth-1);
-  background: #12c2e9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+hr{
+  background: var(--body-color);
+}
+
+.hide-sidebar, .hide-sidebar *{
+  visibility: hidden;
+  width: 0 !important;
 }
 
 .align-center{
@@ -346,7 +361,7 @@ section div{
 .tool{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   box-shadow: var(--shadow-depth-1);
   background-color: var(--cards-border-color);
   padding: var(--body-margin);
@@ -357,7 +372,7 @@ section div{
 }
 
 #projects .text{
-  margin: calc(var(--body-margin)/2) !important;
+  margin: unset;
 }
 
 #public-speaking .tools-list{
@@ -374,27 +389,29 @@ section div{
   padding: calc(var(--body-margin) / 2);
 }
 
-#speaking .tools-list, #projects .tools-list, #certification-links{
+#speaking .tools-list, #projects .tools-list, #certification-links, #contact-links{
   column-count: 1;
 }
 
 .tool-name{
   font-size: 0.8rem;
   color: black;
-  
 }
 
 .tool-image{
   width: 2rem;
 }
 
+.implemented{
+  color: #2196f3 !important;
+}
 
 .ongoing{
-  color: green !important;
+  color: #ffeb3b !important;
 }
 
 .completed{
-  color: grey !important;
+  color: #8bc34a !important;
 }
 
 .black-text{
@@ -406,8 +423,7 @@ section div{
 }
 
 #portfolio{
-  padding: calc( var(--nav-bar-width) );
-  /* width: var(--portfolio-logo); */
+  padding: calc( var(--nav-bar-width) / 2);
   position: absolute;
 }
 
@@ -438,20 +454,18 @@ section div{
 	.flip-container.flip .front {
 	    transform: rotateY(180deg);
   }
+
   .flip-container:hover .expandOnHover {
     display: block
   }
 
-.flip-container, .front, .back {
-  width: var(--section-width);
-}
 
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
   position: relative;
-  display: inline;
+  display: block;
 }
 
 /* hide back of pane during swap */
@@ -461,7 +475,8 @@ section div{
 	transform-style: preserve-3d;
 	position: absolute;
 	top: 0;
-	left: 0;
+  left: 0;
+  width: calc(80vw - 2 * var(--body-margin));
 }
 
 /*  UPDATED! front pane, placed above back */
@@ -481,8 +496,71 @@ section div{
   display: none;
 }
 
-  
-@media only screen and (min-width: 768px){
+.flip-container.flip .back .tools-list .tool{
+  background: white;
+}
+
+
+/*------Hamburger----------*/
+div.hamburger {
+  position: fixed;
+  left: 0;
+  color: white;
+  top: 40vh;
+  z-index: 10000;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 0px;
+  margin: 10% auto;
+  -webkit-transition: all .3s ease, -webkit-transform .2s ease;
+  transition: all .3s ease, transform .2s ease;
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, #fff 20%, #fef 23%, transparent 23%, transparent 48%, #fdf 48%, #fcf 50%, transparent 47%, transparent 76%, #fcf 76%, #fff 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+  background: linear-gradient(top, transparent 0%, transparent 20%, #fff 20%, #fef 23%, transparent 23%, transparent 48%, #fdf 48%, #fcf 50%, transparent 47%, transparent 76%, #fcf 76%, #fff 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+}
+
+div.hamburger:active, div.hamburger:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+div.hamburger.clicked {
+  background: -webkit-linear-gradient(135deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%);
+  background: linear-gradient(135deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, #000 49%, #111 51%, transparent 51%, transparent 100%);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: 85vw;
+  top: 0;
+}
+
+div.hamburger.clicked:active, div.hamburger.clicked:hover {
+  -webkit-transform: scale(0.9) rotate(180deg);
+  -ms-transform: scale(0.9) rotate(180deg);
+  transform: scale(0.9) rotate(180deg);
+}
+
+
+
+@media only screen and (min-width: 800px){
+
+  #side-bar i{
+    font-size: 3.5rem;
+  }
+
+  div.hamburger{
+    margin: 5% auto;
+  }
+
+  section{
+    margin: var(--nav-bar-width);
+  }
+
+  .name, .tool-name{
+    font-size: 1rem;
+  }
 
   #landing img{
     width: 50%;
@@ -515,8 +593,16 @@ section div{
     margin-top: 0;
   }
 
-  #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list{
+  #speaking .tools-list, #projects .tools-list, #certification-links, .twitter-list, #contact-links{
     column-count: 2;
+  }
+
+  .tools-list{
+    padding: calc(var(--body-margin) * 2);
+  }
+
+  .front, .back{
+    width: calc(80vw - 4 * var(--body-margin));
   }
   
 
