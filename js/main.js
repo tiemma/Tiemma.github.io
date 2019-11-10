@@ -81,6 +81,7 @@ $(document).ready(function() {
            <div class="item">
                 <div class="work-place">
                     <h3 class="place">
+                    <i class="fa fa-link"></i>
                         <a target="_blank" href="${data.url}">
                             <u>${data.place}</u>
                             <small>${data.title}</small>
