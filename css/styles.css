@@ -733,6 +733,10 @@ Contact section start here
         display: none !important;
     }
 
+    .logo{
+        display: none !important;
+    }
+
     .header .actions {
         position: static;
         margin: 0 auto;
