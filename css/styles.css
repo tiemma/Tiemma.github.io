@@ -727,6 +727,10 @@ Contact section start here
         position: relative;
     }
 
+    .logo{
+        display: none !important;
+    }
+
     .header .actions {
         position: static;
         margin: 0 auto;
