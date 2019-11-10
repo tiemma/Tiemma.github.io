@@ -723,6 +723,10 @@ Contact section start here
         text-align: center;
     }
 
+    .timeline .location {
+        position: relative;
+    }
+
     .header .actions {
         position: static;
         margin: 0 auto;
