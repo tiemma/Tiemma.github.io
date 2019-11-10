@@ -80,8 +80,11 @@ $(document).ready(function() {
         return `
            <div class="item">
                 <div class="work-place">
-                    <h3 class="place"><a target="_blank" href="${data.url}"><u>${data.place}</u></a>
-                        <small>${data.title}</small>
+                    <h3 class="place">
+                        <a target="_blank" href="${data.url}">
+                            <u>${data.place}</u>
+                            <small>${data.title}</small>
+                        </a>
                     </h3>
                     <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>${data.location}</div>
                 </div>
@@ -338,5 +341,76 @@ $(document).ready(function() {
     ];
     leadership_experiences.forEach(function(data){
         $('#leadership-timeline').append(template(data));
+    });
+
+
+    const talks_experiences = [
+        {
+            place: "DevFest Ibadan",
+            url: "https://speakerdeck.com/tiemma/what-devops-is-really-about",
+            title: "What Is DevOps Really About",
+            location: "Ibadan Nigeria",
+            job_title: "Speaker",
+            timeline: "Nov. 9th 2019",
+        },
+        {
+            place: "DevFest Lagos",
+            url: "https://speakerdeck.com/tiemma/what-devops-is-really-about",
+            title: "What Is DevOps Really About",
+            location: "Lagos Nigeria",
+            job_title: "Organizer, Speaker",
+            timeline: "Nov. 2nd 2019",
+        },
+        {
+            place: "PyCon Nigeria",
+            url: "https://speakerdeck.com/tiemma/event-driven-architecture-the-right-way",
+            title: "Event Driven Architecture The Right Way",
+            location: "Abuja Nigeria",
+            job_title: "Speaker",
+            timeline: "Nov. 1st 2019",
+        },
+        {
+            place: "GDG Ojo-Festac",
+            url: "https://speakerdeck.com/tiemma/gdg-ojo-festac-managing-api-deployments-on-cloud-endpoints",
+            title: "Deploying APIs on Google Cloud Endpoints",
+            location: "Lagos Nigeria",
+            job_title: "Speaker",
+            timeline: "Mar. 2nd 2019",
+        },
+        {
+            place: "Linux Lagos Meetup",
+            url: "https://speakerdeck.com/tiemma/building-docker-from-scratch",
+            title: "Docker!!!, It's built on Cgroups",
+            location: "Lagos Nigeria",
+            job_title: "Speaker",
+            timeline: "Feb. 16th 2019",
+        },
+        {
+            place: "DevFest Ajah",
+            url: "https://speakerdeck.com/tiemma/gdg-devfest-2018-kubernetes-your-go-to-orchestration-tool",
+            title: "Kubernetes, Your Go-To Orchestration Tool",
+            location: "Lagos Nigeria",
+            job_title: "Speaker",
+            timeline: "Nov. 17th 2018",
+        },
+        {
+            place: "DevFest Lagos",
+            url: "https://speakerdeck.com/tiemma/gdg-devfest-2018-kubernetes-your-go-to-orchestration-tool",
+            title: "Kubernetes, Your Go-To Orchestration Tool",
+            location: "Lagos Nigeria",
+            job_title: "Speaker",
+            timeline: "Nov. 3rd 2018",
+        },
+        {
+            place: "Cloud Next '18 Ajah",
+            url: "https://speakerdeck.com/tiemma/code-build-run-observe-on-gcp",
+            title: "Code, Build, Run and Observe on GCP",
+            location: "Lagos Nigeria",
+            job_title: "Speaker",
+            timeline: "Oct. 27th 2018",
+        },
+    ];
+    talks_experiences.forEach(function(data){
+        $('#talks-timeline').append(template(data));
     });
 });
