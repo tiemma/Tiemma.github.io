@@ -1,0 +1,6 @@
+# Created by .ignore support plugin
+_site/
+.sass-cache/
+.jekyll-metadata
+_pdf
+.DS_Store
