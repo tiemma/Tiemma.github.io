@@ -716,6 +716,12 @@ Contact section start here
     color: #8a8a8a;
 }
 
+@media (max-width: 1200px) {
+    .timeline .location {
+        position: relative;
+    }
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
     .header .social {
@@ -723,8 +729,8 @@ Contact section start here
         text-align: center;
     }
 
-    .timeline .location {
-        position: relative;
+    .logo{
+        display: none !important;
     }
 
     .header .actions {
