@@ -76,6 +76,7 @@ $(document).ready(function() {
     });
 
     const template = (data) => {
+        data.responsibilities ? data.responsibilities = data.responsibilities.map(data => `<li>${data}</li>`) : null;
         return `
            <div class="item">
                 <div class="work-place">
@@ -89,11 +90,13 @@ $(document).ready(function() {
                     <div class="time">${data.timeline}</div>
                 </div><!--//job-meta-->
                 <div class="job-desc">
+                <ul>
                 ${data.tech ? `<p><b>Technologies:</b><br/>${data.tech}</p>` : ""}
                     <p>
                         ${data.responsibilities ? "<b>Responsibilities:</b><br/>" : ""}
                         ${data.responsibilities ? data.responsibilities.join('<br/>') : ""}
                     </p>
+                    </ul>
                 </div><!--//job-desc-->
             </div><!--//Kayak-->
         `
