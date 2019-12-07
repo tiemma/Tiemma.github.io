@@ -329,6 +329,11 @@ a.btn:hover {
     margin-bottom: 45px;
 }
 
+.post-date{
+    background-color: #008fa1 !important;
+    color: white !important;
+}
+
 .timeline .item:last-child {
     margin-bottom: 0;
 }

@@ -276,6 +276,14 @@ $(document).ready(function () {
 
     const leadership_experiences = [
         {
+            place: "Google Developer Group Lagos",
+            url: "https://www.meetup.com/en-AU/gdg-lagos/",
+            title: "Organizer",
+            location: "Lagos Nigeria",
+            job_title: "Organizer",
+            timeline: "Oct. 2019 - Present",
+        },
+        {
             place: "Google Cloud Developer Community",
             url: "https://www.meetup.com/en-AU/GDG-Cloud-Lagos/",
             title: "Organizer",
@@ -332,7 +340,8 @@ $(document).ready(function () {
             timeline: "Nov. 2016 - Nov. 2019",
         },
         {
-            place: "Google Developer Group",
+        {
+            place: "Google Developer Group UNILAG",
             url: "http://unilag.gdg.ng",
             title: "Co-Manager",
             location: "UNILAG",
