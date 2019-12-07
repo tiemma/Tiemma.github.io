@@ -340,7 +340,6 @@ $(document).ready(function () {
             timeline: "Nov. 2016 - Nov. 2019",
         },
         {
-        {
             place: "Google Developer Group UNILAG",
             url: "http://unilag.gdg.ng",
             title: "Co-Manager",
