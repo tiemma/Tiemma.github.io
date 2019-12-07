@@ -338,6 +338,7 @@ a.btn:hover {
     margin-bottom: 0;
 }
 
+
 .timeline .item:before {
     content: "";
     position: absolute;
