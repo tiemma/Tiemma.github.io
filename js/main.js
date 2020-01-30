@@ -276,7 +276,7 @@ $(document).ready(function () {
 
     const leadership_experiences = [
         {
-            place: "Google Developer Group Lagos",
+            place: "Google Developer Group",
             url: "https://www.meetup.com/en-AU/gdg-lagos/",
             title: "Organizer",
             location: "Lagos Nigeria",
