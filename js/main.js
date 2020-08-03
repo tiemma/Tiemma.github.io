@@ -104,12 +104,42 @@ $(document).ready(function() {
 
   const work_experiences = [
     {
+      place : "Goldman Sachs",
+      url : "https://www.goldmansachs.com/",
+      title : "Summer Analyst",
+      location : "Remote, UK",
+      job_title : "Software Engineering Analyst",
+      timeline : "July.2020  - Aug. 2020",
+      tech : "React, React Saga, Redux, Typescript",
+      responsibilities : [
+        "Design of dashboards for business cases",
+        "Implementation of APIs for core frontend functionality",
+        "React Saga and Component development"
+      ]
+    },
+    {
+      place : "Replex GmbH",
+      url : "https://www.replex.io/",
+      title : "Backend/DevOps Engineer",
+      location : "Remote, Germany",
+      job_title : "Part Time <br />Infrastructure Consultant",
+      timeline : "",
+      tech : "K8S, GCP, AWS, Typescript, Golang, Docker, Postgres, TimescaleDB, Prometheus, Grafana",
+      responsibilities : [
+        "Writing efficient SQL queries for independent features",
+        "Design and implementation of various custom features for metrics, API development and Database Management",
+        "Work with k8s internal APIs and resources on cost management and features dependent on that",
+        "Typescript development and general API work",
+        "Benchmarking and implementation of prometheus queries for metrics"
+      ]
+    },
+    {
       place : "DEIMOS Cloud",
       url : "https://deimos.io",
       title : "Experienced Computer Pipeline Plumber",
       location : "Remote, South Africa",
       job_title : "DevOps Engineer",
-      timeline : "Mar. 2019 - Present",
+      timeline : "Mar. 2019 - July. 2020",
       tech : "K8S, GCP, AWS, Ansible, Terraform, Velostrata, VMWare",
       responsibilities : [
         "Migrated VMs with Velostrata",
@@ -119,7 +149,8 @@ $(document).ready(function() {
         "Filesystem benchmarking for possible client proposals",
         "Migrated data dumps of 1TBs from mysql to cloudsql instances, fixed issues on sql compatibility with sed",
         "General research on best technology options for various problems",
-        "General knowledge sharing and team assistance work in relation to Kubernetes"
+        "General knowledge sharing and team assistance work in relation to Kubernetes",
+        "VPN installations, calico work etc."
       ]
     },
     {
