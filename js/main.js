@@ -110,7 +110,7 @@ $(document).ready(function() {
       location : "Remote, UK",
       job_title : "Software Engineering Analyst",
       timeline : "July.2020  - Aug. 2020",
-      tech : "React, React Saga, Redux, Typescript",
+      tech : "React, Redux-Saga, Redux, Typescript",
       responsibilities : [
         "Design of dashboards for business cases",
         "Implementation of APIs for core frontend functionality",
