@@ -122,8 +122,8 @@ $(document).ready(function() {
       url : "https://www.replex.io/",
       title : "Backend/DevOps Engineer",
       location : "Remote, Germany",
+      timeline: "May. 2020 - Present",
       job_title : "Part Time <br />Infrastructure Consultant",
-      timeline : "",
       tech : "K8S, GCP, AWS, Typescript, Golang, Docker, Postgres, TimescaleDB, Prometheus, Grafana",
       responsibilities : [
         "Writing efficient SQL queries for independent features",
@@ -205,9 +205,9 @@ $(document).ready(function() {
     {
       place : "Interswitch Group",
       url : "https://www.interswitchgroup.com",
-      title : "Intern",
+      title : "Software Engineer",
       location : "Lagos Nigeria",
-      job_title : "Software Engineering Intern",
+      job_title : "Software Engineer",
       timeline : "Jul. 2018 - Dec. 2018",
       tech :
           "Corda, Java, JS, K8S, Hyperledger, ELK, Spring Boot, Python, Go, Slate",
@@ -222,25 +222,11 @@ $(document).ready(function() {
       ]
     },
     {
-      place : "Home",
-      title : "Freelancer",
-      url : "#",
-      location : "Lagos Nigeria",
-      job_title : "Professional Freelancer",
-      timeline : "Jan. 2016 - Dec. 2018",
-      tech : "PHP, cPanel, Laravel, Dialogflow, HTML Stack, Blockchain",
-      responsibilities : [
-        "Built an identity verification system using smart contracts and uPort for secure login functionality.",
-        "Built a SPA using Vanilla JS and MaterializeCSS for an ALC project with GraphQL deployed on a MongoDB and Node Docker instance.",
-        "Co-built a distributed music streaming service called coJam which demoed at Small Chops NG’s valentine program."
-      ]
-    },
-    {
       place : "GRIT Systems",
-      title : "Intern",
+      title : "Software Engineer",
       url : "https://grit.systems/grit/home",
       location : "Lagos Nigeria",
-      job_title : "Software Engineering Intern",
+      job_title : "Software Engineer",
       timeline : "Jun. 2017 - Jul. 2018",
       tech :
           "Scala, Python, JS, Flask, Kafka (Confluent, Lenses), MongoDB, Embedded, Elastic, Serial, UART",
@@ -254,48 +240,7 @@ $(document).ready(function() {
         "Wrote a Kafka Connect plugin to perform data remapping in anticipation of an avro schema change.",
         "Worked with Kafka extensively, in stream data manipulations, kafka connect, kafka streams, schema registry"
       ]
-    },
-    {
-      place : "Startup Studio",
-      title : "Remote Software Engineer",
-      url : "#",
-      location : "Remote, Lagos Nigeria",
-      job_title : "Software Engineer",
-      timeline : "Sep. 2017 - Mar. 2018",
-      tech : "Wordpress, JS, HTML Stack, PHP, Laravel, Dialogflow",
-      responsibilities : [
-        "Implemented chatbot functionality using endpoints hosted and created using ngrok and Laravel and NLP services from Dialog Flow.",
-        "Consumed data from an Excel file containing large records into an SQL database using the PHPExcel module.",
-        "Mostly Wordpress work, PHP and Laravel API development etc."
-
-      ]
-    },
-    {
-      place : "iQube Labs",
-      title : "Software Engineer",
-      url : "#",
-      location : "Lagos Nigeria",
-      job_title : "Software Engineer",
-      timeline : "Mar. 2016 - Mar. 2018",
-      tech : "Wordpress, JS, HTML Stack, PHP, Drones, OpenCV, Algorithms",
-      responsibilities : [
-        "Designed APIs on Laravel",
-        "Fixed issues with team mates relating to HTML and Linux",
-        "Used OpenCV in research for some projects",
-        "Worked with drones and robotic devices",
-        "Some wordpress work here and there!"
-      ]
-    },
-    {
-      place : "HealthFacts NG",
-      title : "Software Engineer",
-      url : "#",
-      location : "Lagos Nigeria",
-      job_title : "Software Engineer",
-      timeline : "Jan. 2017 - Sep. 2017",
-      tech : "Wordpress, JS, HTML Stack, PHP",
-      responsibilities : [ "Some wordpress work here and there!" ]
-    },
+    }
   ];
   work_experiences.forEach(function(
       data) { $('#experience-timeline').append(template(data)); });
@@ -391,7 +336,7 @@ $(document).ready(function() {
       place : "Open Source Community, Africa",
       url :
           "https://speakerdeck.com/tiemma/open-source-and-linux-the-journey-then-and-now",
-      title : "Open Source & Linux, The Journey Then And Now",
+      title : "Open Source & Linux, <br /> The Journey Then And Now",
       location : "Nigeria",
       job_title : "Speaker",
       timeline : "Feb. 21 2020",
