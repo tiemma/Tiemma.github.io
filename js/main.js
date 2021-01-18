@@ -103,20 +103,6 @@ $(document).ready(function() {
   };
 
   const work_experiences = [
-    // {
-    //   place : "Goldman Sachs",
-    //   url : "https://www.goldmansachs.com/",
-    //   title : "Summer Analyst",
-    //   location : "Remote, UK",
-    //   job_title : "Software Engineering Analyst",
-    //   timeline : "July.2020  - Aug. 2020",
-    //   tech : "React, Redux-Saga, Redux, Typescript",
-    //   responsibilities : [
-    //     "Design of dashboards for business cases",
-    //     "Implementation of APIs for core frontend functionality",
-    //     "React Saga and Component development"
-    //   ]
-    // },
     {
       place : "Replex GmbH",
       url : "https://www.replex.io/",
@@ -131,6 +117,20 @@ $(document).ready(function() {
         "Work with k8s internal APIs and resources on cost management and features dependent on that",
         "Typescript development and general API work",
         "Benchmarking and implementation of prometheus queries for metrics"
+      ]
+    },
+       {
+      place : "Goldman Sachs",
+      url : "https://www.goldmansachs.com/",
+      title : "Summer Analyst",
+      location : "Remote, UK",
+      job_title : "Software Engineering Analyst",
+      timeline : "July.2020  - Aug. 2020",
+      tech : "React, Redux-Saga, Redux, Typescript",
+      responsibilities : [
+        "Design of dashboards for business cases",
+        "Implementation of APIs for core frontend functionality",
+        "React Saga and Component development"
       ]
     },
     {
